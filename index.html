@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테트리스</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TETRIS</h1>
+    <div class="game-container">
+        <div id="message" class="message">PRESS START</div>
+        <canvas id="tetris-board" width="300" height="600"></canvas>
+        <div class="game-info">
+            <div>
+                <h2>SCORE</h2>
+                <p id="score">0</p>
+            </div>
+            <div>
+                <h2>NEXT</h2>
+                <canvas id="next-block" width="120" height="120"></canvas>
+            </div>
+            <div class="grid-toggle">
+                <label><input type="checkbox" id="grid-toggle" checked> GRID</label>
+            </div>
+            <button id="start-button">START</button>
+            <div class="controls">
+                <h3>CONTROLS</h3>
+                <p>
+                    <span>Move:</span>
+                    <span>← →</span>
+                </p>
+                <p>
+                    <span>Rotate:</span>
+                    <span>↑</span>
+                </p>
+                <p>
+                    <span>Soft Drop:</span>
+                    <span>↓</span>
+                </p>
+                <p>
+                    <span>Hard Drop:</span>
+                    <span>SPACE</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

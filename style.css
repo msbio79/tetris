@@ -1,0 +1,169 @@
+:root{
+    --bg:#0b1020;
+    --panel:#0f1724;
+    --accent:#00d2ff;
+    --muted:#98a0b3;
+}
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+    margin:0; padding:2rem; font-family:Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background:linear-gradient(180deg, #071127 0%, #0b1020 60%);
+    color:#e6eef7; display:flex; align-items:center; justify-content:center; gap:2rem;
+}
+h1{position:absolute; top:1rem; left:1rem; font-size:22px; letter-spacing:2px; color:var(--muted)}
+.game-container{display:flex; gap:1.5rem; align-items:flex-start}
+.game-container{position:relative}
+.message{position:absolute; left:0; top:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:24px; color:#dffaff; letter-spacing:2px; text-shadow:0 2px 8px rgba(0,0,0,.6); pointer-events:none}
+.game-container canvas{background:linear-gradient(180deg,#061426,#0b1a2e); border-radius:8px; display:block}
+#tetris-board{box-shadow:0 10px 30px rgba(0,0,0,.6), inset 0 0 18px rgba(0,0,0,.4);}
+.game-info{width:200px; padding:.85rem; background:linear-gradient(180deg,#071326,#081824); border-radius:10px; border:1px solid rgba(255,255,255,.04); box-shadow:0 8px 18px rgba(0,0,0,.5)}
+.game-info h2{margin:.5rem 0; color:var(--muted); font-size:12px; letter-spacing:1px}
+#score{font-weight:700; font-size:20px; margin:4px 0 10px}
+#next-block{display:block; margin-top:6px; border-radius:6px}
+#start-button{width:100%; padding:.6rem .5rem; margin:10px 0 8px; border-radius:6px; border:none; background:linear-gradient(90deg,#00bcd4,#0076ff); color:#00131b; font-weight:700; cursor:pointer}
+.controls{font-size:12px; color:var(--muted); margin-top:8px}
+.controls p{display:flex; justify-content:space-between; margin:.25rem 0}
+.controls span:first-child{opacity:.8}
+.controls span:last-child{font-weight:600}
+.grid-toggle{margin-top:8px; display:flex; align-items:center; gap:.5rem; color:var(--muted); font-size:12px}
+.grid-toggle input[type="checkbox"]{accent-color:var(--accent)}
+.footer{position:fixed; right:10px; bottom:10px; color:rgba(255,255,255,.35); font-size:12px}
+
+/* mobile responsiveness */
+@media(max-width:750px){
+    body{padding:1rem}
+    .game-container{flex-direction:column; align-items:center}
+    .game-info{width:95%;}
+}
+:root {
+    --bg-color: #1a1a1a;
+    --primary-text: #f0f0f0;
+    --secondary-text: #a0a0a0;
+    --board-bg: #0d0d0d;
+    --border-color: #444;
+    --button-bg: #f0f0f0;
+    --button-text: #1a1a1a;
+    --button-hover-bg: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--primary-text);
+}
+
+.game-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+#tetris-board {
+    border: 2px solid var(--border-color);
+    background-color: var(--board-bg);
+    box-shadow: 0 0 20px rgba(0, 240, 240, 0.2);
+}
+
+.game-info {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.game-info h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+}
+
+.game-info > div {
+    background-color: var(--board-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+#score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin: 0;
+}
+
+#next-block {
+    background-color: var(--board-bg);
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+#start-button {
+    margin-top: 10px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    text-transform: uppercase;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#start-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+.controls {
+    text-align: left;
+}
+
+.controls h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+    text-align: center;
+}
+
+.controls p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.controls span:first-child {
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.controls span:last-child {
+    font-weight: 400;
+    color: var(--secondary-text);
+}
